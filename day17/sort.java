@@ -14,7 +14,7 @@
                     min = j;
                 }
             }
-
+`
             temp = a[i];
             a[i] = a[min];
             a[min] = temp;
