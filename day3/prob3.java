@@ -1,5 +1,11 @@
-package day1;
+class Main {
+    public static void main(String[] args) {
 
-public class prob3 {
-    
+        int n = -5;
+
+        if (n >= 0)
+            System.out.println("Positive");
+        else
+            System.out.println("Negative");
+    }
 }

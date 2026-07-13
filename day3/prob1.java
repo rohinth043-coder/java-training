@@ -1,5 +1,7 @@
-package day1;
+class Main {
+    public static void main(String[] args) {
+        int n = 4;
 
-public class prob1 {
-    
+        System.out.println("Cube = " + (n * n * n));
+    }
 }
