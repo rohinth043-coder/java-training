@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
@@ -15,5 +17,4 @@ class Solution {
             temp.remove(temp.size() - 1);
         }
     }
-}
 }
