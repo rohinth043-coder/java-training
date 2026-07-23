@@ -4,7 +4,7 @@
         public Static void main(String[] args); {
             RotatedSortedArray rsa = new RotatedSortedArray();
             int[] n = {4, 5, 6, 7, 0, 1, 2};
-            System.out.println(rsa.search(n, 0));
+            System.out.println(rsa.search(n, 0)); 
         }
         int start= 0,end=n.length-1;
 
