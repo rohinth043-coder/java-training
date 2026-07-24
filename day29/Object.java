@@ -1,4 +1,4 @@
-public  class Solution {
+public  class Object{
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         Map<Integer, List<Integer>> pre = new HashMap<>();
         for (int i = 0; i < numCourses; i++) pre.put(i, new ArrayList<>());

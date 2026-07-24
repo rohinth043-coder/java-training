@@ -1,46 +1,15 @@
-package day29;
+public class Solution {
 
-
-    public class Solution {
-    public boolean exist(char[][] board, String word) {
-        int m = board.length;
-        int n = board[0].length;
-
-        boolean[][] visited = new boolean[m][n];
-        boolean result = false;
-        
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (board[i][j] == word.charAt(0)) {
-                    result = backtrack(board, word, visited, i, j, 0);
-                    if (result) return true;
-                }
-            }
-        }
-        
-        return false;
+    Node[] visited;
+    public Node cloneGraph(Node node) {
+        if(node == null) return null;
+        visited = new Node[101];
+        return DFS(node);
     }
-    
-    private boolean backtrack(char[][] board, String word, boolean[][] visited, int i, int j, int index) {
-        if (index == word.length()) {
-            return true;
-        }
-        
-        if (i < 0 || i >= board.length || j < 0 || j >= board[0].length || visited[i][j] || board[i][j] != word.charAt(index)) {
-            return false;
-        }
-        
-        visited[i][j] = true;
-        
-        if (backtrack(board, word, visited, i + 1, j, index + 1) ||
-            backtrack(board, word, visited, i - 1, j, index + 1) ||
-            backtrack(board, word, visited, i, j + 1, index + 1) ||
-            backtrack(board, word, visited, i, j - 1, index + 1)) {
-            return true;
-        }
-        
-        visited[i][j] = false;
-        return false;
+    public Node DFS(Node node){
+        if(visited[node.val] != null) return visited[node.val];
+        visited[node.val] = new Node(node.val);
+        for(Node n: node.neighbors) visited[node.val].neighbors.add(DFS(n));
+        return visited[node.val];
     }
-}
-
+ }  
