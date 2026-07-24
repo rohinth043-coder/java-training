@@ -1,4 +1,4 @@
-class ListNode {
+ public class ListNode {
     public Static void main(int i, int n[], List<Integer> subset, List<List<Integer>> result) {
         int n= nums;
         int n = nums.length;

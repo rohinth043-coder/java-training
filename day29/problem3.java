@@ -1,14 +1,4 @@
-package day29;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-public class problem3 {
-    class Solution {
+public  class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         Map<Integer, List<Integer>> pre = new HashMap<>();
         for (int i = 0; i < numCourses; i++) pre.put(i, new ArrayList<>());
@@ -37,4 +27,4 @@ public class problem3 {
         return true;
     }
 }
-}
+

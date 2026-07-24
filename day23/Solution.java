@@ -1,5 +1,5 @@
- import java.util.*; 
- class Solution {
+
+public  class Solution {
     public int subarraysDivByK(int[] A, int K) {
         int[] map = new int[K];
 		map[0] = 1;

@@ -1,7 +1,5 @@
-import java.util.Arrays;
 
-class Solution {
-   Solution() {
+public class  Solution() {
    }
 
    public int findContentChildren(int[] var1, int[] var2) {
